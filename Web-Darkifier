@@ -1,0 +1,79 @@
+// ==UserScript==
+// @name         Web Darkifier
+// @version      0.1
+// @author       ATS Business and Games
+// @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
+
+// @include /https?:\/\/www\.(instagram|ketv|snopes|thewindowclub)\.com\/.*/
+
+// @grant        GM_addStyle
+// ==/UserScript==
+
+//GM_addStyle(" body {background: black !important;} ");
+
+//Change any of the below to false to disable changes for that site (useful if a site is improperly displaying and you don't want to repetedly dis/en able this userscript.
+
+/*
+// @match      https://www.instagram.com/
+// @match      http://www.ketv.com/*
+// @match      http://www.snopes.com/*
+// @match      http://www.thewindowsclub.com/*
+*/
+
+
+
+//(http|https):\/\/www\.(instagram|ketv|snopes|thewindowsclub)\.com\/.+
+
+var instagram = true;
+var ketv = true;
+var snopes = true;
+var thewindowsclub = true;
+
+function addGlobalStyle(css) {
+    var head, style;
+    head = document.getElementsByTagName('head')[0];
+    if (!head) { return; }
+    style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = css;
+    head.appendChild(style);
+}
+
+//ketv
+if (window.location.host == "www.ketv.com" && ketv)
+{
+    addGlobalStyle('body {background:#111111 !important; }');
+    addGlobalStyle('#article-headline--title {color:#414141 !important; }');
+
+}
+
+//instagram
+if (window.location.host == "www.instagram.com" && instagram)
+{
+    addGlobalStyle('._onabe {background-color:black !important; }');
+    addGlobalStyle('._6ltyr {background-color:black !important; }');
+    addGlobalStyle('._oofbn {background-color:black !important; }');
+}
+
+//snopes
+if (window.location.host == "www.snopes.com" && snopes)
+{
+    addGlobalStyle('header {background:black !important; }');
+    addGlobalStyle('header {color:#555555 !important; }');
+    addGlobalStyle('.content-wrapper-main {background:black !important; }');
+    addGlobalStyle('blockquote {background:black !important; }');
+    addGlobalStyle('p {color:#555555 !important; }');
+    addGlobalStyle('footer {background:black !important; }');
+    addGlobalStyle('.footer #bottom-siteMap a {color:#555555 !important; }');
+    addGlobalStyle('#bottom-legalText {color:#555555 !important; }');
+}
+
+//thewindowsclub
+if (window.location.host == "www.thewindowsclub.com" && thewindowsclub)
+{
+    addGlobalStyle('body {background:black !important; }');
+    addGlobalStyle('body {color:#555555 !important; }');
+    addGlobalStyle('p {color:#555555 !important; }');
+    addGlobalStyle('#updates {background-color:black !important; }');
+    addGlobalStyle('.side-panel {background:black !important; }');
+}
