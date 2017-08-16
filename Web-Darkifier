@@ -4,7 +4,7 @@
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 
-// @include /https?:\/\/www\.(instagram|ketv|snopes|thewindowclub)\.com\/.*/
+//@include /(http|https):\/\/www\.(groovypost|instagram|ketv|snopes|thewindowsclub)\.com\/.*/
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -12,18 +12,6 @@
 //GM_addStyle(" body {background: black !important;} ");
 
 //Change any of the below to false to disable changes for that site (useful if a site is improperly displaying and you don't want to repetedly dis/en able this userscript.
-
-/*
-// @match      https://www.instagram.com/
-// @match      http://www.ketv.com/*
-// @match      http://www.snopes.com/*
-// @match      http://www.thewindowsclub.com/*
-*/
-
-
-
-//(http|https):\/\/www\.(instagram|ketv|snopes|thewindowsclub)\.com\/.+
-
 var instagram = true;
 var ketv = true;
 var snopes = true;
