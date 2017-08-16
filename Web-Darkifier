@@ -64,4 +64,5 @@ if (window.location.host == "www.thewindowsclub.com" && thewindowsclub)
     addGlobalStyle('p {color:#555555 !important; }');
     addGlobalStyle('#updates {background-color:black !important; }');
     addGlobalStyle('.side-panel {background:black !important; }');
+    addGlobalStyle('#logo-left {filter: invert(100%); }');
 }
