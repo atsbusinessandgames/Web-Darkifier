@@ -4,7 +4,7 @@
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 
-//@include /(http|https):\/\/www\.(groovypost|instagram|ketv|snopes|thewindowsclub)\.com\/.*/
+//@include /(http|https):\/\/www\.(instagram|ketv|snopes|thewindowsclub)\.com\/.*/
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -59,7 +59,7 @@ if (window.location.host == "www.snopes.com" && snopes)
 //thewindowsclub
 if (window.location.host == "www.thewindowsclub.com" && thewindowsclub)
 {
-    addGlobalStyle('body {background:black !important; }');
+    addGlobalStyle('body {background:#111111 !important; }');
     addGlobalStyle('body {color:#555555 !important; }');
     addGlobalStyle('p {color:#555555 !important; }');
     addGlobalStyle('#updates {background-color:black !important; }');
