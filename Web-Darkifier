@@ -61,14 +61,13 @@ if (window.location.host == "www.instagram.com" && instagram)
     addGlobalStyle('._9mmn5 {color:#555555 !important; }');
     addGlobalStyle('._1qj9z {display:none; }');
     addGlobalStyle('h1, h2 {color:white; }');
-    addGlobalStyle('._qv64e {color: #999; }');
     addGlobalStyle('input[type=text] {background-color:#555555; }');
     addGlobalStyle('._jcvs2 {background-color:#555555; }');
-    addGlobalStyle('._qv64e {color:#555555; }');
     addGlobalStyle('._dv59m {background-color:#999; }');
     addGlobalStyle('._sgi9z {color:white; }');
     addGlobalStyle('._sayjy {color:#555555; }');
     addGlobalStyle('._gimca {background-color:#999; }');
+    addGlobalStyle('._qv64e {color: #white; }');
 }
 
 //snopes
