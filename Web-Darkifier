@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Web Darkifier
-// @version      0.1
+// @version      0.2
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 
-//@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub)\.com\/.*/
+//@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub|zdnet)\.com\/.*/
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -17,6 +17,7 @@ var instagram = true;
 var ketv = true;
 var snopes = true;
 var thewindowsclub = true;
+var zdnet = true;
 
 function addGlobalStyle(css) {
     var head, style;
@@ -101,4 +102,15 @@ if (window.location.host == "www.thewindowsclub.com" && thewindowsclub)
     addGlobalStyle('#updates {background-color:black !important; }');
     addGlobalStyle('.side-panel {background:black !important; }');
     addGlobalStyle('#logo-left {filter: invert(100%); }');
+}
+
+//zdnet
+//cnet
+if (window.location.host == "www.zdnet.com" && zdnet)
+{
+    addGlobalStyle('body {background:#443d3d !important; }');
+    addGlobalStyle('.article {background-color:#4e4e4e !important; }');
+    addGlobalStyle('.storyBody {background-color:#4e4e4e !important; }');
+    addGlobalStyle('.contentWrapper>.container {background-color:#4e4e4e !important; }');
+    addGlobalStyle('.topContent {background-color:#4e4e4e !important; }');
 }
