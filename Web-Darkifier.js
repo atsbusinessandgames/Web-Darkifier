@@ -3,13 +3,12 @@
 // @version      0.2
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
+// @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier
 
 //@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub|zdnet)\.com\/.*/
 
 // @grant        GM_addStyle
 // ==/UserScript==
-
-//GM_addStyle(" body {background: black !important;} ");
 
 //Change any of the below to false to disable changes for that site (useful if a site is improperly displaying and you don't want to repetedly dis/en able this userscript.
 var cnet = true;
