@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Web Darkifier
-// @version      0.2
+// @version      0.3
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 // @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier
