@@ -4,7 +4,7 @@
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 
-//@include /(http|https):\/\/www\.(instagram|ketv|snopes|thewindowsclub)\.com\/.*/
+//@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub)\.com\/.*/
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -12,6 +12,7 @@
 //GM_addStyle(" body {background: black !important;} ");
 
 //Change any of the below to false to disable changes for that site (useful if a site is improperly displaying and you don't want to repetedly dis/en able this userscript.
+var cnet = true;
 var instagram = true;
 var ketv = true;
 var snopes = true;
@@ -27,10 +28,10 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-//ketv
-if (window.location.host == "www.ketv.com" && ketv)
+//cnet
+if (window.location.host == "www.cnet.com" && cnet)
 {
-    addGlobalStyle('body {background:#111111 !important; }');
+    addGlobalStyle('body {background:#443d3d !important; }');
     addGlobalStyle('#article-headline--title {color:#414141 !important; }');
 
 }
@@ -68,6 +69,14 @@ if (window.location.host == "www.instagram.com" && instagram)
     addGlobalStyle('._sayjy {color:#555555; }');
     addGlobalStyle('._gimca {background-color:#999; }');
     addGlobalStyle('._qv64e {color: #white; }');
+}
+
+//ketv
+if (window.location.host == "www.ketv.com" && ketv)
+{
+    addGlobalStyle('body {background:#111111 !important; }');
+    addGlobalStyle('#article-headline--title {color:#414141 !important; }');
+
 }
 
 //snopes
