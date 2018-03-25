@@ -3,10 +3,13 @@
 // @namespace    web-darkifier
 // @version      0.3
 // @author       ATS Business and Games
+// @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 // @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
+// @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
 // @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier
-
+// @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier.js
+// @supportURL   https://github.com/atsbusinessandgames/Web-Darkifier/issues
 //@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub|zdnet)\.com\/.*/
 
 // @grant        GM_addStyle
