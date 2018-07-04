@@ -1,16 +1,13 @@
 // ==UserScript==
 // @name         Web Darkifier
 // @namespace    web-darkifier
-// @version      0.3
-// @author       ATS Business and Games
+// @version      0.4
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 // @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
-// @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
-// @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier
 // @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier.js
 // @supportURL   https://github.com/atsbusinessandgames/Web-Darkifier/issues
-//@include /(http|https):\/\/www\.(cnet|instagram|ketv|snopes|thewindowsclub|zdnet)\.com\/.*/
+//@include /(http|https):\/\/(www\.)?(cnet|instagram|ketv|snopes|thehackernews|thewindowsclub|zdnet)\.com\/.*
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -20,6 +17,7 @@ var cnet = true;
 var instagram = true;
 var ketv = true;
 var snopes = true;
+var thehackernews = true;
 var thewindowsclub = true;
 var zdnet = true;
 
@@ -81,7 +79,6 @@ if (window.location.host == "www.ketv.com" && ketv)
 {
     addGlobalStyle('body {background:#111111 !important; }');
     addGlobalStyle('#article-headline--title {color:#414141 !important; }');
-
 }
 
 //snopes
@@ -95,6 +92,14 @@ if (window.location.host == "www.snopes.com" && snopes)
     addGlobalStyle('footer {background:black !important; }');
     addGlobalStyle('.footer #bottom-siteMap a {color:#555555 !important; }');
     addGlobalStyle('#bottom-legalText {color:#555555 !important; }');
+}
+//thehackernews
+if (window.location.host == "www.thehackernews.com" && thehackernews)
+{
+    addGlobalStyle('body {background:#000000 !important; }');
+    addGlobalStyle('.main {background:#003941 !important; }');
+    addGlobalStyle('.home-title {background:#5f2a2a !important; }');
+
 }
 
 //thewindowsclub
