@@ -94,11 +94,15 @@ if (window.location.host == "www.snopes.com" && snopes)
     addGlobalStyle('#bottom-legalText {color:#555555 !important; }');
 }
 //thehackernews
-if (window.location.host == "www.thehackernews.com" && thehackernews)
+if (window.location.host == "thehackernews.com" && thehackernews)
 {
-    addGlobalStyle('body {background:#000000 !important; }');
+    addGlobalStyle('.menu-box {background:#003941 !important; }');
+    addGlobalStyle('body {background:#1e1f33 !important; }');
     addGlobalStyle('.main {background:#003941 !important; }');
-    addGlobalStyle('.home-title {background:#5f2a2a !important; }');
+    addGlobalStyle('.home-title {background:#113e44 !important; }');
+    addGlobalStyle('.below-post {background:#003941 !important; }');
+    addGlobalStyle('.deal-box {background:#243252 !important; }');
+    addGlobalStyle('.footer {background:#243252 !important; }');
 
 }
 
