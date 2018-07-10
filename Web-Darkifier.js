@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Web Darkifier
 // @namespace    web-darkifier
-// @version      0.5
+// @version      0.6
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 // @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
@@ -32,7 +32,7 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-//cnet
+//cnet Needs fixing articles partial, homepage full
 if (window.location.host == "www.cnet.com" && cnet)
 {
     addGlobalStyle('body {background:#443d3d !important; }');
@@ -75,24 +75,18 @@ if (window.location.host == "www.instagram.com" && instagram)
     addGlobalStyle('._qv64e {color: #white; }');
 }
 
-//ketv
+//ketv Needs fixing articles partial, homepage full
 if (window.location.host == "www.ketv.com" && ketv)
 {
     addGlobalStyle('body {background:#111111 !important; }');
     addGlobalStyle('#article-headline--title {color:#414141 !important; }');
 }
 
-//snopes
+//snopes Needs fixing articles partial, homepage full
 if (window.location.host == "www.snopes.com" && snopes)
 {
-    addGlobalStyle('header {background:black !important; }');
-    addGlobalStyle('header {color:#555555 !important; }');
-    addGlobalStyle('.content-wrapper-main {background:black !important; }');
-    addGlobalStyle('blockquote {background:black !important; }');
-    addGlobalStyle('p {color:#555555 !important; }');
-    addGlobalStyle('footer {background:black !important; }');
-    addGlobalStyle('.footer #bottom-siteMap a {color:#555555 !important; }');
-    addGlobalStyle('#bottom-legalText {color:#555555 !important; }');
+    addGlobalStyle('header, blockquote, footer, .content-wrapper-main {background:black !important; }');
+    addGlobalStyle('.footer, header, #bottom-siteMap, a, p, #bottom-legalText {color:#555555 !important; }');
 }
 
 //thatsnonsense
@@ -110,33 +104,25 @@ if (window.location.host == "www.thatsnonsense.com" && thatsnonsense)
 //thehackernews
 if (window.location.host == "thehackernews.com" && thehackernews)
 {
-    addGlobalStyle('.menu-box {background:#003941 !important; }');
     addGlobalStyle('body {background:#1e1f33 !important; }');
-    addGlobalStyle('.main {background:#003941 !important; }');
+    addGlobalStyle('.main, .below-post, .menu-box {background:#003941 !important; }');
     addGlobalStyle('.home-title {background:#113e44 !important; }');
-    addGlobalStyle('.below-post {background:#003941 !important; }');
-    addGlobalStyle('.deal-box {background:#243252 !important; }');
-    addGlobalStyle('.footer {background:#243252 !important; }');
+    addGlobalStyle('.deal-box, .footer {background:#243252 !important; }');
 }
 
-//thewindowsclub
+//thewindowsclub mostly working
 if (window.location.host == "www.thewindowsclub.com" && thewindowsclub)
 {
     addGlobalStyle('body {background:#111111 !important; }');
-    addGlobalStyle('body {color:#555555 !important; }');
-    addGlobalStyle('p {color:#555555 !important; }');
+    addGlobalStyle('body, p {color:#555555 !important; }');
     addGlobalStyle('#updates {background-color:black !important; }');
     addGlobalStyle('.side-panel {background:black !important; }');
     addGlobalStyle('#logo-left {filter: invert(100%); }');
 }
 
 //zdnet
-//cnet
 if (window.location.host == "www.zdnet.com" && zdnet)
 {
     addGlobalStyle('body {background:#443d3d !important; }');
-    addGlobalStyle('.article {background-color:#4e4e4e !important; }');
-    addGlobalStyle('.storyBody {background-color:#4e4e4e !important; }');
-    addGlobalStyle('.contentWrapper>.container {background-color:#4e4e4e !important; }');
-    addGlobalStyle('.topContent {background-color:#4e4e4e !important; }');
+    addGlobalStyle('.article, .storyBody, .contentWrapper>.container, .topContent {background-color:#4e4e4e !important; }');
 }
