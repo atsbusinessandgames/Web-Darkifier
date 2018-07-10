@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Web Darkifier
 // @namespace    web-darkifier
-// @version      0.4
+// @version      0.5
 // @author       ATS Business and Games
 // @description  This userscript aims to make the web easier on your eyes by making websites have darker backgrounds.
 // @homepage     https://github.com/atsbusinessandgames/Web-Darkifier
 // @downloadURL  https://raw.githubusercontent.com/atsbusinessandgames/Web-Darkifier/master/Web-Darkifier.js
 // @supportURL   https://github.com/atsbusinessandgames/Web-Darkifier/issues
-//@include /(http|https):\/\/(www\.)?(cnet|instagram|ketv|snopes|thehackernews|thewindowsclub|zdnet)\.com\/.*
+//@include /(http|https):\/\/(www\.)?(cnet|instagram|ketv|snopes|thatsnonsense|thehackernews|thewindowsclub|zdnet)\.com\/.*
 
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -17,6 +17,7 @@ var cnet = true;
 var instagram = true;
 var ketv = true;
 var snopes = true;
+var thatsnonsense = true;
 var thehackernews = true;
 var thewindowsclub = true;
 var zdnet = true;
@@ -93,6 +94,19 @@ if (window.location.host == "www.snopes.com" && snopes)
     addGlobalStyle('.footer #bottom-siteMap a {color:#555555 !important; }');
     addGlobalStyle('#bottom-legalText {color:#555555 !important; }');
 }
+
+//thatsnonsense
+if (window.location.host == "www.thatsnonsense.com" && thatsnonsense)
+{
+    addGlobalStyle('body {background:#1e1f33 !important; }');
+    addGlobalStyle('#cookie-law-info-bar {background:#33344c !important; }');
+    addGlobalStyle('.wrap, .aside, .rpwe-li, .widget-area, .widget, #authorbox {background-color:#1e1f33 !important; }');
+    addGlobalStyle('.content {background-color:#171823 !important; }');
+    addGlobalStyle('h1, h2, h3, h4, h5, h6, .widgettitle {color:#3c3232 !important; }');
+    addGlobalStyle('a {color:#363ba0 !important; }');
+    addGlobalStyle('.footer-widgets {color:#404048 !important; }');
+}
+
 //thehackernews
 if (window.location.host == "thehackernews.com" && thehackernews)
 {
@@ -103,7 +117,6 @@ if (window.location.host == "thehackernews.com" && thehackernews)
     addGlobalStyle('.below-post {background:#003941 !important; }');
     addGlobalStyle('.deal-box {background:#243252 !important; }');
     addGlobalStyle('.footer {background:#243252 !important; }');
-
 }
 
 //thewindowsclub
